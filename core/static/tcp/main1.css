@@ -1,0 +1,65 @@
+.rom {
+    margin-left: 350px;
+
+  }
+
+  .rom i {
+    display: inline-block;
+    transition: all 0.3s ease;
+    color: white;
+  }
+
+  .rom i:hover {
+    transform: rotateY(180deg);
+    color: white;
+  }
+
+  .section-title {
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #0d1b2a;
+      display: flex;
+      align-items: center;
+    }
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 40px;
+      height: 2px;
+      background: #e63946;
+      margin-right: 12px;
+    }
+    .section-content {
+      color: #444;
+      margin-top: 10px;
+    }
+
+    .card
+    {
+    
+      height: 400px;
+    }
+
+     h6{
+    color: white;
+   }
+   small
+   {
+    color: white;
+   }
+
+   /* img
+   {
+    transition:transform 0.5s ease;
+   }
+   img:hover
+   {
+    transform: scale(1.3);
+   } */
+
+   .span-sparates
+   {
+    margin-left: 10px;
+   }
+    
+ 

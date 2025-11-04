@@ -1,0 +1,633 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+
+  <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+
+<body class="bg-light">
+
+  <div class="container py-3">
+    <div class="row align-items-center">
+      <!-- Left Image (Logo) -->
+      <div class="col-md-2 col-4">
+        <img src="{% static 'tcp/logo.png' %}" class="img-fluid" alt="Logo">
+      </div>
+
+      <!-- Right Image (Banner/Ad) -->
+      <div class="col-md-10 col-8 text-end">
+        <img src="{% static 'tcp/header_card.png'%}" class="img-fluid" alt="banner" style="height: 90px; width: 700px;">
+      </div>
+    </div>
+  </div>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="sujal collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-light fw-semi-bold " href="{% url 'prohome' %}">HOME <span class="span-sparates fs-5">|</span></a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fw-semi-bold" href="{% url 'proabout' %}">ABOUT<span class="span-sparates fs-5">|</span> </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fw-semi-bold" href="{% url 'procategary' %}">CATEGORY<span class="span-sparates fs-5">|</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fw-semi-bold" href="{% url 'prolatestnews' %}">LATEST NEWS<span
+                class="span-sparates fs-5">|</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light fw-semi-bold" href="{% url 'procontact' %}">CONTACT<span class="span-sparates fs-5">|</span></a>
+          </li>
+        </ul>
+
+        <div class="rom d-flex gap-4 my-3">
+          <a href="#" target="_blank"><i class="bi-twitter fs-5 bi"></i></a>
+          <a href="#" target="_blank"><i class="bi-facebook fs-5 bi"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="bi bi-instagram fs-5"></i></a>
+
+          <a href="#"><i class="bi bi-youtube fs-5"></i></a>
+        </div>
+        <div style="margin-left: 120px;">
+          <a href="#"><i class="bi bi-search fs-3 text-light"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container my-5">
+    <div class="row g-4">
+      <!-- Left big card -->
+      <div class="col-lg-8">
+        <div class="custom-card shadow-lg" style="height: 500px;">
+          <img src="{% static 'tcp/trending_top2.jpg' %}" alt="Main News">
+          <div class="card-overlay">
+            <span class="category-badge category-business">BUSINESS</span>
+            <h2 class="fw-bold">Anna Lora Stuns In White At Her Australia Premiere</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right stacked cards -->
+      <div class="col-lg-4">
+        <!-- Card 1 -->
+        <div class="custom-card shadow-lg" style="height: 240px;">
+          <img src="{% static 'tcp/trending_top3.jpg' %}" alt="Fashion">
+          <div class="card-overlay">
+            <span class="category-badge category-fashion">FASHION</span>
+            <h5 class="card-title">Secretart for Economic Air plane that looks like</h5>
+            <p class="card-meta mb-0">by Alice cloe - Jun 19, 2020</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="custom-card shadow-lg" style="height: 240px;">
+          <img src="{% static 'tcp/trending_top4.jpg' %}" alt="Tech">
+          <div class="card-overlay">
+            <span class="category-badge category-tech">TECH</span>
+            <h5 class="card-title">Secretart for Economic Air plane that looks like</h5>
+            <p class="card-meta mb-0">by Alice cloe - Jun 19, 2020</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container my-4">
+    <div class="row g-4">
+
+      <!-- LEFT MAIN CONTENT -->
+      <div class="col-lg-8">
+
+        <div class="card border-0 shadow-sm p-3">
+          <h4 class="fw-bold">Whats New</h4>
+          <div class="mb-3 ms-auto">
+            <a href="#" class="me-3 text-dark text-decoration-none">Lifestyle</a>
+            <a href="#" class="me-3 text-dark text-decoration-none">Travel</a>
+            <a href="#" class="me-3 text-dark text-decoration-none">Fashion</a>
+            <a href="#" class="me-3 text-dark text-decoration-none">Sports</a>
+            <a href="#" class="text-danger text-decoration-none">Technology</a>
+          </div>
+
+          <div class="row">
+            <!-- Main Article -->
+            <div class="col-md-6">
+              <div class="news-img mb-2">
+                <img src="{% static 'tcp/whats_news_details1.png' %}" class="img-fluid" alt="">
+              </div>
+              <h5 class="fw-bold">Secrettart for Economic Air plane that looks like</h5>
+              <p class="text-muted small">by Alice Doe - Jun 19, 2020</p>
+              <p class="text-secondary small">Struggling to sell one multi-million dollar home currently on the market
+                won’t stop actress and singer Jennifer Lopez.</p>
+            </div>
+
+            <!-- Small Articles -->
+            <div class="col-md-6">
+              <div class="d-flex mb-3">
+                <div class="news-img me-3" style="width:100px; height: 150px;">
+                  <img src="{% static 'tcp/_img1.png' %}" class="img-fluid" alt="" style="height: 100px; width: 100px;">
+                </div>
+                <div>
+                  <span class="category text-success">Fashion</span>
+                  <p class="mb-0">Portrait of group of friends ting eat. market in.</p>
+                  <small class="text-muted">Jun 19, 2020</small>
+                </div>
+              </div>
+              <div class="d-flex mb-3">
+                <div class="news-img me-3" style="width:100px;">
+                  <img src="{% static 'tcp/whats_right_img2.png' %}" class="img-fluid" alt="">
+                </div>
+                <div>
+                  <span class="category text-success">Fashion</span>
+                  <p class="mb-0">Portrait of group of friends ting eat. market in.</p>
+                  <small class="text-muted">Jun 19, 2020</small>
+                </div>
+              </div>
+              <div class="d-flex mb-3">
+                <div class="news-img me-3" style="width:100px;">
+                  <img src="{% static 'tcp/977-122x100.jpg' %}" class="img-fluid" alt="">
+                </div>
+                <div>
+                  <span class="category text-success">Fashion</span>
+                  <p class="mb-0">Portrait of group of friends ting eat. market in.</p>
+                  <small class="text-muted">Jun 19, 2020</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ad Banner -->
+        <div class="mt-4">
+          <img src="{% static 'tcp/header_card.png'%}" class="img-fluid rounded" alt="">
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDEBAR -->
+      <div class="col-lg-4">
+
+        <!-- Social Box -->
+        <div class="sidebar-box mb-4 text-center">
+          <div class="d-flex justify-content-around">
+            <div>
+              <h6 class="text-secondary">8,045</h6>
+              <small class="text-muted">Fans</small>
+            </div>
+            <div>
+              <h6 class="text-secondary">8,045</h6>
+              <small class="text-muted">Fans</small>
+            </div>
+            <div>
+              <h6 class="text-secondary">8,045</h6>
+              <small class="text-muted">Fans</small>
+            </div>
+            <div>
+              <h6 class="text-secondary">8,045</h6>
+              <small class="text-muted">Fans</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Most Recent -->
+        <div class="sidebar-box">
+          <h6 class="fw-bold mb-3">Most Recent</h6>
+
+          <div class="mb-3">
+            <div class="news-img mb-2">
+              <img src="{% static 'tcp/most_recent.png' %}" class="img-fluid" alt="">
+            </div>
+            <span class="category text-danger">Vogue</span>
+            <p class="fw-bold mb-1">What to Wear: 9+ Cute Work Outfits to Wear This</p>
+            <small class="text-muted">Jhon | 2 hours ago</small>
+          </div>
+
+          <div class="d-flex mb-3">
+            <div class="news-img me-3" style="width:90px;">
+              <img src="{% static 'tcp/most_recent1.png' %}" class="img-fluid" alt="">
+            </div>
+            <div>
+              <p class="mb-0">Scarlett’s disappointment at latest accolade</p>
+              <small class="text-muted">Jhon | 2 hours ago</small>
+            </div>
+          </div>
+
+          <div class="d-flex">
+            <div class="news-img me-3" style="width:90px;">
+              <img src="{% static 'tcp/most_recent2.png' %}" class="img-fluid" alt="">
+            </div>
+            <div>
+              <p class="mb-0">Most Beautiful Things to Do in Sidney with Your BF</p>
+              <small class="text-muted">Jhon | 3 hours ago</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- coursel slider -->
+
+  <div class="container py-4 ">
+    <div class="row g-4">
+
+      <!-- Left Side Ad -->
+      <div class="col-md-4">
+        <div class="ad-card">
+          <img src="{% static 'tcp/body_card2.png'%}" alt="">
+        </div>
+      </div>
+
+      <!-- Right Side Carousel -->
+      <div class="col-md-8">
+        <div class="card p-3 shadow-sm rounded-4">
+          <h5 class="mb-3 fw-bold">Most Popular</h5>
+
+          <div id="popularCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <img src="{% static 'tcp/weeklynews2.png'%}" class="d-block w-100" alt="...">
+                    <p class="card-text fw-bold">Scarlett’s disappointment at latest accolade</p>
+                    <p class="author">Jhon | 2 hours ago</p>
+                  </div>
+                  <div class="col-md-4">
+                    <img src="{% static 'tcp/weeklynews1.png'%}" class="d-block w-100" alt="...">
+                    <p class="card-text fw-bold">Scarlett’s disappointment at latest accolade</p>
+                    <p class="author">Jhon | 2 hours ago</p>
+                  </div>
+                  <div class="col-md-4">
+                    <img src="{% static 'tcp/weeklynews3.png'%}" class="d-block w-100" alt="...">
+                    <p class="card-text fw-bold">Scarlett’s disappointment at latest accolade</p>
+                    <p class="author">Jhon | 2 hours ago</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <img src="{% static 'tcp/weeklynews2.jpg' %}" class="d-block w-100" alt="...">
+                    <p class="card-text fw-bold">Another popular story headline</p>
+                    <p class="author">Jhon | 5 hours ago</p>
+                  </div>
+                  <div class="col-md-4">
+                    <img src="{% static 'tcp/weeklynews1.png'%}" class="d-block w-100" alt="...">
+                    <p class="card-text fw-bold">Scarlett’s disappointment at latest accolade</p>
+                    <p class="author">Jhon | 6 hours ago</p>
+                  </div>
+                  <div class="col-md-4">
+                    <img src="{% static 'tcp/weeklynews3.png'%}" class="d-block w-100" alt="...">
+                    <p class="card-text fw-bold">Scarlett’s disappointment at latest accolade</p>
+                    <p class="author">Jhon | 7 hours ago</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#popularCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#popularCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="container my-5">
+    <h2 class="fw-bold mb-4">Trending News</h2>
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card news-card">
+          <img src="{% static 'tcp/tranding2 (1).png' %}" class="card-img-top" alt="News">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">What to Expect From the 2020 Oscar Nominations</h5>
+            <p class="text-muted mb-2">Jun 19, 2020</p>
+            <a href="#" class="btn btn-light rounded-circle shadow-sm">
+              <i class="bi bi-play-fill fs-4 text-primary"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card news-card">
+          <img src="{% static 'tcp/tranding1 (1).png' %}" class="card-img-top" alt="News">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">What to Expect From the 2020 Oscar Nominations</h5>
+            <p class="text-muted mb-2">Jun 19, 2020</p>
+            <a href="#" class="btn btn-light rounded-circle shadow-sm">
+              <i class="bi bi-play-fill fs-4 text-primary"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card news-card">
+          <img src="{% static 'tcp/tranding2 (1).png' %}" class="card-img-top" alt="News">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">What to Expect From the 2020 Oscar Nominations</h5>
+            <p class="text-muted mb-2">Jun 19, 2020</p>
+            <a href="#" class="btn btn-light rounded-circle shadow-sm">
+              <i class="bi bi-play-fill fs-4 text-primary"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container mt-4">
+  <!-- Main Video -->
+  <div class="ratio ratio-16x9 mb-4">
+    <video class="rounded shadow" controls autoplay loop muted>
+      <source src="{% static 'tcp/News2.mp4' %}" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- Grid of Smaller Videos -->
+  <div class="row g-3">
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="ratio ratio-16x9">
+        <video class="rounded shadow" controls autoplay loop muted>
+          <source src="{% static 'tcp/News1.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="ratio ratio-16x9">
+        <video class="rounded shadow" controls autoplay loop muted>
+          <source src="{% static 'tcp/News3.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="ratio ratio-16x9">
+        <video class="rounded shadow" controls autoplay loop muted>
+          <source src="{% static 'tcp/News2.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3">
+      <div class="ratio ratio-16x9">
+        <video class="rounded shadow" controls autoplay loop muted>
+          <source src="{% static 'tcp/News2.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="container py-5">
+
+    <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- Carousel Inner -->
+      <div class="carousel-inner">
+
+        <!-- First Slide -->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card">
+                <img src="{% static 'tcp/weekly2News3 (1).png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h6 class="card-title">What to Expect From the 2020 Oscar Nominations</h6>
+                  <small class="text-muted">19 Jan 2020</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="{% static 'tcp/weekly2News1 (1).png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h6 class="card-title">What to Expect From the 2020 Oscar Nominations</h6>
+                  <small class="text-muted">19 Jan 2020</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="{% static 'tcp/weekly2News2 (1).png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h6 class="card-title">What to Expect From the 2020 Oscar Nominations</h6>
+                  <small class="text-muted">19 Jan 2020</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="{% static 'tcp/weekly2News4.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h6 class="card-title">What to Expect From the 2020 Oscar Nominations</h6>
+                  <small class="text-muted">19 Jan 2020</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Slide -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card">
+                <img src="{% static 'tcp/weekly2News3 (1).png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h6 class="card-title">Another News</h6>
+                  <small class="text-muted">20 Jan 2020</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="{% static 'tcp/weekly2News1 (1).png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h6 class="card-title">Another News</h6>
+                  <small class="text-muted">20 Jan 2020</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="{% static 'tcp/weekly2News2 (1).png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h6 class="card-title">Another News</h6>
+                  <small class="text-muted">20 Jan 2020</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="{% static 'tcp/weekly2News4.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h6 class="card-title">Another News</h6>
+                  <small class="text-muted">20 Jan 2020</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+  </div>
+
+  <div  class="p-5">
+    <img src="{% static 'tcp/body_card3 (2).png' %}" alt="" class=" d-block mx-auto"></div>
+
+  <footer class="bg-dark text-light pt-5">
+  <div class="container">
+    <div class="row justify-content-evenly">
+
+      <!-- Left Column -->
+      <div class="col-md-4 mb-4">
+        <img src="{% static 'tcp/logo2_footer.png' %}" alt="" class="mb-3 img-fluid" style="max-width: 150px;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+        <p>198 West 21th Street, Suite 721 New York, NY 10010</p>
+        <p>Phone: +95 (0) 123 456 789<br>Cell: +95 (0) 123 456 789</p>
+      </div>
+
+      <!-- Middle Column -->
+      <div class="col-md-4 mb-4">
+        <h5 class="mb-3">Popular post</h5>
+
+        <div class="d-flex mb-3">
+          <img src="{% static 'tcp/footer_post1.png' %}" alt="" class="me-3" style="width: 60px; height: 60px; object-fit: cover;">
+          <div>
+            <h6 class="mb-1">Scarlett’s disappointment at latest accolade</h6>
+            <small>Jhon | 2 hours ago</small>
+          </div>
+        </div>
+
+        <div class="d-flex mb-3">
+          <img src="{% static 'tcp/footer_post2.png' %}" alt="" class="me-3" style="width: 60px; height: 60px; object-fit: cover;">
+          <div>
+            <h6 class="mb-1">Scarlett’s disappointment at latest accolade</h6>
+            <small>Jhon | 2 hours ago</small>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <img src="{% static 'tcp/footer_post3.png' %}" alt="" class="me-3" style="width: 60px; height: 60px; object-fit: cover;">
+          <div>
+            <h6 class="mb-1">Scarlett’s disappointment at latest accolade</h6>
+            <small>Jhon | 2 hours ago</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column (Ad) -->
+      <div class="col-md-3 mb-4 text-center">
+        <img src="{% static 'tcp/body_card2.png' %}" alt="Ad" class="img-fluid">
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="text-center py-3 mt-3" style="background-color: #292020;">
+    <small>copyright @2025 all rights reserved | this template is made with ❤️ by 
+      <a href="#" class="text-white text-decoration-none" target="_blank">colorib</a>
+    </small>
+  </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button onclick="scrollToTop()" id="scrollBtn" 
+        class="btn btn-danger position-fixed bottom-0 end-0 m-4">
+  <i class="bi bi-arrow-up"></i>
+
+
+
+</body>
+
+<script>
+
+   // Show button on scroll
+  window.onscroll = function() {
+    const btn = document.getElementById("scrollBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Scroll to top
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+
+</html>

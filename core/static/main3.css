@@ -1,0 +1,46 @@
+.rom {
+    margin-left: 350px;
+
+  }
+
+  .rom i {
+    display: inline-block;
+    transition: all 0.3s ease;
+    color: white;
+  }
+
+  .rom i:hover {
+    transform: rotateY(180deg);
+    color: white;
+  }
+
+    h6{
+    color: white;
+   }
+   small
+   {
+    color: white;
+   }
+
+   .span-sparates
+   {
+    margin-left: 10px;
+   }
+
+   #scrollBtn {
+      z-index: 999;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      display: none;
+    }
+  
+
+  
+
+  
+
+  
+  
+

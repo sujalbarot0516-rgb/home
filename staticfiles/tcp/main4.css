@@ -1,0 +1,71 @@
+html
+{
+  scroll-behavior: smooth;
+}
+.rom {
+    margin-left: 350px;
+
+  }
+
+  .rom i {
+    display: inline-block;
+    transition: all 0.3s ease;
+    color: white;
+  }
+
+  .rom i:hover {
+    transform: rotateY(180deg);
+    color: white;
+  }
+
+    h6{
+    color: white;
+   }
+   small
+   {
+    color: white;
+   }
+
+   .span-sparates
+   {
+    margin-left: 10px;
+   }
+
+     .contact-info i {
+      font-size: 24px;
+      color: #6c757d;
+      margin-right: 10px;
+    }
+
+    .btn-send {
+      border: 1px solid red;
+      color: red;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      padding: 10px 30px;
+    }
+
+    .btn-send:hover {
+      background-color: red;
+      color: white;             
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: red;
+      color: white;
+      font-size: 24px;
+      padding: 12px 18px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    .back-to-top:hover {
+      background: darkred;
+      color: #fff;
+    }
+  
